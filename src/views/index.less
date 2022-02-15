@@ -1,0 +1,89 @@
+.container_warp{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    .operating {
+        position: absolute;
+        top: 0;
+        z-index: 99;
+        background-color: #ffffff;
+        padding: 20px 10px;
+        box-shadow: 1px 1px 4px 0 #0a0a0a2e;
+    }
+}
+.btn-group {
+    border-right: 1px solid #efefef;
+    display: inline-block;
+    padding-left: 10px;
+    padding-right: 14px;
+    position: relative;
+    .btn-group_tips {
+        text-align: center;
+        top: 63px;
+        left: 1px;
+        position: absolute;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 120px;
+        height: 60px;
+        background: #515a6e;
+        border-radius:6px;
+        animation: tips 4s;
+        transition: all 1s;
+        &:after {
+            content: "";
+            width: 0;
+            height: 0;
+            position: absolute;
+            top: -5px;
+            left: 46%;
+            border-width: 0 5px 5px;
+            border-style: solid;
+            border-color: transparent transparent #515a6e;
+        }
+    }
+    &:last-of-type {
+        border-right: 0;
+    }
+    .btn {
+        display: inline-block;
+        margin: 2px;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        cursor: pointer;
+        transition: all .4s;
+        border-radius: 6px;
+        border: 1px solid rgba(233, 233, 233, 0);
+        i {
+            font-size: 20px;
+        }
+    }
+    .currentArrow {
+        background: #2d8cf0;
+        color: #fff;
+    }
+}
+@keyframes tips {
+    0% {opacity: 0;transform:scale(0);}
+    10% {opacity: 1;transform:scale(1);}
+    90% {opacity: 1;transform:scale(1);}
+    100% {opacity: 0;transform:scale(0);}
+}
+.rotate-square{
+    display: inline-block;
+    transform: rotate(45deg);
+}
+.my-snapline {
+    color: #000;
+}
+.right_drawer {
+    height: 100%;
+    width: 300px;
+    border-left: 1px solid #eee;
+    background: #fff;
+}
